@@ -1,0 +1,42 @@
+/*@import url("https://fonts.googleapis.com/css?family=Nunito")
+
+/*<link href='https://use.fontawesome.com/releases/v5.4.1/css/all.css')/>
+*/
+/*@fontface {
+	fontFamily: 'Nunito',cursive;
+	src: url('https://fonts.googleapis.com/css?family=Nunito')
+}*/
+/*<!-- Latest compiled and minified CSS -->*/
+/*<script src="https://maxcdn.bootstrapcdn.com/bootstrap/latest/css/bootstrap.min.css">
+</script>
+/*<!-- Optional theme -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/latest/css/bootstrap-theme.min.css">
+</script>
+*/
+ svg {
+ 	margin-left: 0.25rem;
+ }
+ 
+ footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  font-color: #c7ada2;
+  font-family: 'Nunito', sans-serif;
+  font-size: 8.5px;
+  /*border-top: solid 1px;*/
+  color: gray;
+  }
+/* dont work????
+ .designBy {
+  fontSize: 6px;
+  marginTop: 0;
+  marginBottom: 0;
+  opacity: .5;
+ }
+
+
+ .designBy2 {
+ 	opacity: .7
+ }
+ */
