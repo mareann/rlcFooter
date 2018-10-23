@@ -1,43 +1,54 @@
+/* https://www.instagram.com/rescuingleftovercuisine/ */
 import React, { Component } from "react"
 import { Container, Row, Col } from 'reactstrap'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { library } from '@fortawesome/fontawesome-svg-core'
-import { faFacebook,faYoutube,faTwitter, faLinkedin } from '@fortawesome/free-brands-svg-icons'
+import { faFacebook,faYoutube,faTwitter, faInstagram, faLinkedin } from '@fortawesome/free-brands-svg-icons'
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
 import "./Footer.css";
 
-library.add(faFacebook, faYoutube, faTwitter, faLinkedin, faEnvelope)
+library.add(faFacebook, faYoutube, faTwitter, faInstagram, faLinkedin, faEnvelope)
+
+let footerRow = {
+  marginLeft: "0",
+  marginTop: "3px",
+  marginBottom: "3px",
+  fontSize: "6px",
+  fontWeight: "600"
+}
 
 let designBy = {
   fontSize: "6px",
   marginTop: "0",
   marginBottom: "0",
   opacity: ".5",
-  marginLeft: "33%",
-  marginRight: "33%",
-  textAlign: "center"
+  color: "#757373",
+  marginLeft: "37%"
 }
 
 let designByCo = {
   fontSize: "6px",
-  opacity: ".8"
-}
-
-let yellow = {
-  backgroundColor: "yellow"
-}
-
-let pink = {
-  backgroundColor: "pink"
+  color: "#1f1e1e",
+  fontWeight: "600"
 }
 
 let company = {
-  marginLeft: "50%"
+  marginLeft: "55%",
+  opacity: ".7",
+  color: "#666565"
 }
 
 let con = {
-   paddingLeft: "0",
-   paddingRight: "0"
+  paddingLeft: "0",
+  paddingRight: "0"
+}
+
+let  iconStyle = {
+  color: "#a49f9f"
+}
+
+let iconCol = {
+  paddingLeft: "45px"
 }
 
 class Footer extends Component {
@@ -47,18 +58,20 @@ class Footer extends Component {
       <footer>
         <Container style={con}>
           <Row>
-            <Col xs="9">
-              <span style={company}>2018 Rescuing Leftover Cuisine</span>
+            <Col xs="8">
+              <span style={company}>&copy;2018 Rescuing Leftover Cuisine</span>
             </Col>
-            <Col xs="3">
-               <FontAwesomeIcon icon={["fab", "youtube"]}/>
-               <FontAwesomeIcon icon={["fab", "facebook-f"]}/>
-               <FontAwesomeIcon icon={["fab", "twitter"]}/>
-               <FontAwesomeIcon icon={["fab", "linkedin"]}/>
-               <FontAwesomeIcon icon={["fa", "envelope"]}/>
+            <Col xs="4" style={iconCol}>
+               <a style={iconStyle} target="_blank" rel="noopener noreferrer" href="https://www.youtube.com/channel/UCJKK9jkEIHt8j17cHPHCPQw"><FontAwesomeIcon icon={["fab", "youtube"]}/></a>
+               <a style={iconStyle} target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/RescuingLeftoverCuisine"><FontAwesomeIcon icon={["fab", "facebook-f"]}/></a>
+               <a style={iconStyle} target="_blank" rel="noopener noreferrer" href="https://twitter.com/rescuingcuisine"><FontAwesomeIcon icon={["fab", "twitter"]}/></a>
+               <a style={iconStyle} target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/rescuingleftovercuisine"><FontAwesomeIcon icon={["fab", "instagram"]}/></a>
+               <a style={iconStyle} target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/company/rescuing-leftover-cuisine"><FontAwesomeIcon icon={["fab", "linkedin"]}/></a>
+               <a style={iconStyle} target="_blank" rel="noopener noreferrer" href="mailto:info@resuingleftovercuisine.org"><FontAwesomeIcon icon={["fa", "envelope"]}/></a>
             </Col>
            </Row>
-           <Row>
+           <Row style={footerRow}>
+             <Col xs="4"></Col>
              <Col xs="4" style={designBy}>
                <span>Designed by </span>
                <span style={designByCo}>Fluid Designs</span>
@@ -67,7 +80,6 @@ class Footer extends Component {
         </Container>
       </footer>
       )}
-
 }
 
 export default Footer;

@@ -6,6 +6,7 @@ class App extends Component {
     return (
       <div>
         <div className="container">
+        Body
         <Footer />
         </div>
       </div>
